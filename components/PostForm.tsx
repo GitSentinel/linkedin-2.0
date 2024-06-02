@@ -1,3 +1,4 @@
+/* eslint-disable @next/next/no-img-element */
 "use client";
 
 import { useUser } from "@clerk/nextjs";
@@ -47,7 +48,7 @@ function PostForm() {
   return (
     <div className="mb-2">
         <form 
-            ref={ref} 
+            ref={ref as unknown as React.RefObject<HTMLFormElement>} 
             action={formData => {
                 handlePostAction(formData);
         }} className="p-3 bg-white rounded-lg border">
