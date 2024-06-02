@@ -41,3 +41,5 @@ async function generateSASToken() {
 
     return sasToken;
 }
+
+export default generateSASToken;
